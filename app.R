@@ -23,6 +23,7 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
+  # date ranges that are in use
   dates <- reactive(
     if (input$date_range[1] <= input$date_range[2]) {
       return(seq(from = input$date_range[1], to = input$date_range[2], by = "days"))
